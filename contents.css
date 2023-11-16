@@ -1,0 +1,135 @@
+.top-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    
+}
+
+.main-post {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.manifest-thumbnail {
+    object-fit: cover; 
+    width: 100%;
+}
+
+.image-box{
+    display: flex;
+    position: relative;
+}
+
+.overlay {  
+    position: absolute;
+    top: 70%; /* 컨테이너의 상단 중앙에 텍스트와 버튼 배치 */
+    left: 28%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    text-align: center;
+    color: white;
+    font-size: 1.65rem;
+    overflow: hidden;
+    background-color: rgba(169, 169, 169, 0.25) ;
+    border-radius: 30px;
+}
+/*Q. 페이지 크기에 따른 위치 조정?*/
+
+.overlay p {
+    font-size: 60px; font-weight: 700;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+}
+
+.overlay button {
+    width: 160px;
+    height: 50px;
+    margin: 20px 0 ;
+    color: aliceblue;
+    font-size: 28px;
+    border-radius: 10px;
+    background-color: #25252583;
+}
+/*실제 버튼 크기를 조절하는법 그 외에도 버튼 안에 있는 이미지와 실제 버튼의 배치, 크기 조절 위치 조절등.. */
+.overlay button:hover {
+    cursor: pointer;
+}
+
+
+.netflex-button {
+    position: fixed;
+    background: none;
+    width: 150px;
+    height: auto;
+    border: none;
+    left: 40px;
+    cursor: pointer;
+    z-index: 3;
+}
+/*Q. 지금은 fixed로 고정했는데  header를 설정하고 고정시켜서 내려오는 방법? 이렇게 짠 이유는 header을 설정할시에 배경에 포스터가 안들어가서 overlay 분리 */
+
+.avatar-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* 추가로 아이콘 크기나 다른 스타일을 조절할 필요가 있으면 여기에 추가합니다. */
+.netflex-icon {
+    width: 80%;
+}
+
+.avatar-icon {
+    height: 50px;
+}
+
+.main-container {
+    margin-left: 30px;
+}
+
+
+.netflex-originals-title {
+    font-size: 40px;
+}
+
+
+.netflex-originals,
+.netflex-popular-contents {
+    display: flex;
+    flex-flow: row ;
+    justify-content: flex-start;
+}
+
+.netflex-originals img,
+.netflex-popular-contents img {
+    margin-right: 20px; 
+    margin-top: 20px;
+    max-width: 240px;
+    transition: transform 0.5s, margin 0.5s;
+
+}
+
+
+.netflex-originals img:hover,
+.netflex-popular-contents img:hover {
+    transform: scale(1.15);
+    margin: -10px, -10px;
+    cursor: pointer;
+}
+/*Q. hover을 했을경우 다른 포스터들은 자연스럽게 밀리고 작아지는.... */
+
+@media (max-width: 1500px) {
+    .overlay {
+        display: none;
+    }
+
+}

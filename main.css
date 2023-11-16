@@ -1,0 +1,11 @@
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #141414;
+    color: #ffffff;
+
+    
+}
+/*전체 스타일이나 Body에 margin, padding0을 주는 이유? */
